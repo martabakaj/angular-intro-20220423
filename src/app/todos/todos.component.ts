@@ -39,6 +39,10 @@ export class TodosComponent {
 
     this.storageService.saveTodos(this.todos);
   }
+  public removeAll (): void {
+    this.todos = [];
+    this.storageService.saveTodos(this.todos);
+  }
   constructor(
     private storageService: StorageService,)
     {}
