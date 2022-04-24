@@ -4,6 +4,7 @@ import {CounterComponent} from './counter/counter.component';
 import {HelloComponent} from './hello/hello.component';
 import { TimerComponent } from './timer/timer.component';
 import {TodosComponent} from './todos/todos.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {
@@ -18,11 +19,15 @@ const routes: Routes = [
     path: 'todos',
     component: TodosComponent,
   },
-
   {
     path:'timer',
     component: TimerComponent,
   },
+  {
+    path:'users',
+    component: UsersComponent,
+  },
+  
   {
     path: '**',
     redirectTo: 'todos',
