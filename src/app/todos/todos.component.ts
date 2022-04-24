@@ -6,7 +6,7 @@ import {Todo} from './model/todo';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss'],
 })
-export class TodosComponent implements OnInit {
+export class TodosComponent {
   public todos: Todo[] = [];
   public text: string = '';
 
@@ -30,11 +30,8 @@ export class TodosComponent implements OnInit {
     this.clear();
   }
 
-  public setDone(todo: Todo) {
-    todo.done = true;
+  public deleteTodo(todo: Todo){
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1);
   }
-
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+  }
